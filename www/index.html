@@ -1,15 +1,6 @@
 
 <!-- This is the project specific website template -->
 <!-- It can be changed as liked or replaced by other content -->
-
-<?php
-
-$domain=ereg_replace('[^\.]*\.(.*)$','\1',$_SERVER['HTTP_HOST']);
-$group_name=ereg_replace('([^\.]*)\..*$','\1',$_SERVER['HTTP_HOST']);
-$themeroot='r-forge.r-project.org/themes/rforge/';
-
-echo '<?xml version="1.0" encoding="UTF-8"?>';
-?>
 <!DOCTYPE html
 	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -33,21 +24,22 @@ echo '<?xml version="1.0" encoding="UTF-8"?>';
 <!-- get project title  -->
 <!-- own website starts here, the following may be changed as you like -->
 
-<?php if ($handle=fopen('http://'.$domain.'/export/projtitl.php?group_name='.$group_name,'r')){
-$contents = '';
-while (!feof($handle)) {
-	$contents .= fread($handle, 8192);
-}
-fclose($handle);
-echo $contents; } ?>
+<h2>XKCD and the xkcd package</h2>
+
+<p><a href="http://xkcd.com">XKCD</a> is is a webcomic created by Randall Munroe. The comic's tagline describes it as a webcomic of romance, sarcasm, math, and language (<a href="http://en.wikipedia.org/wiki/Xkcd">Wikipedia</a>).</p>
+
+<p>This package tries to give a satisfactory answer to Programs in the PC-Axis family use a particular data file format (see the full <a href="http://stackoverflow.com/questions/12675147/how-can-we-make-xkcd-style-graphs-in-r">How can we make xkcd style graphs in R?</a>. The xkcd package provides a set of functions for plotting data in a XKCD style using <a href="http://ggplot2.org/">ggplot2</a>.</p>
+
+
 
 <!-- end of project description -->
 
-<p> No content added. </p>
+<!-- <p> No content added. </p> -->
 
 <img src="caritas.png" alt="caritas.png">
 
-<p> The <strong>project summary page</strong> you can find <a href="http://<?php echo $domain; ?>/projects/<?php echo $group_name; ?>/"><strong>here</strong></a>. </p>
+<p>The development page is <a href="https://r-forge.r-project.org/projects/xkcd/">here</a>.</p>
+
 
 </body>
 </html>
