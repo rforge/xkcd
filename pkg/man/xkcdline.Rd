@@ -25,8 +25,8 @@ xkcdline(mapping, data, typexkcdline = "segment", mask = TRUE, ...)
   It draws a segment or a circunference in a XKCD style.
   If it is a segment, the following aesthetics are required:
  \enumerate{
-   \item x: x position of the point from.
-   \item y: y position of the point from.
+   \item xbegin: x position of the point from.
+   \item ybegin: y position of the point from.
    \item xend: x position of the point to.
    \item yend: y position of the point to.
  }
