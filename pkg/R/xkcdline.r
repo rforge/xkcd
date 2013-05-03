@@ -1,6 +1,6 @@
 # Emilio Torres Manzanera
 # University of Oviedo
-# Time-stamp: <2013-05-02 Thu 23:15 emilio on emilio-laptop2>
+# Time-stamp: <2013-05-03 Fri 20:46 emilio on emilio-laptop2>
 # =====================================================================
 
 
@@ -9,7 +9,7 @@ xkcdline <- function(mapping, data, typexkcdline="segment", mask = TRUE, ...) {
   if(typexkcdline == "segment" ){
     fun <- "pointssegment"
     ## Required variable in the aesthetics function for segment
-    requiredaesthetics <-  c("x","y","xend","yend")
+    requiredaesthetics <-  c("xbegin","ybegin","xend","yend")
    
   } else if(typexkcdline == "circunference" ) {
     fun <- "pointscircunference"
@@ -51,10 +51,18 @@ xkcdline <- function(mapping, data, typexkcdline="segment", mask = TRUE, ...) {
                                                    )
 
   ##print(listofinterpolateswithillustrativedata)
+  if(typexkcdline == "segment" ){
+    ## the mapping is xbegin, ybegin,...
+    ## but we need x,y [functions pointssegment returns x,y and geom_path requires x,y]
+    ## mapping <- mappingjoin(aes(x=x,y=y), mapping) # R CMD check gives NOTES
+    mapping <- with(data, mappingjoin(aes(x=x,y=y), mapping))
+    }
+
   
   listofpaths <- lapply(listofinterpolateswithillustrativedata,
                         function(x, mapping, mask, ...) {
                           pathmask <- NULL
+                          ##print(mapping)
                           if(mask) {
                             ## Plot a white line widther that the original line
                             ## We must check the color, colour or size

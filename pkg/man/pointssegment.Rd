@@ -8,12 +8,12 @@ Interpolates between two points.
   intermidate points can be jittered and smoothed with a Bezier curve.
   }
   \usage{
-pointssegment(x, y, xend, yend, npoints = 10, xjitteramount= 0, yjitteramount=0, bezier = TRUE)
+pointssegment(xbegin, ybegin, xend, yend, npoints = 10, xjitteramount= 0, yjitteramount=0, bezier = TRUE)
 }
 
 \arguments{
-  \item{x}{A numeric value. Coordinate x of the point from which to interpolate.}
-  \item{y}{A numeric value. Coordinate y of the point from which to interpolate.}
+  \item{xbegin}{A numeric value. Coordinate x of the point from which to interpolate.}
+  \item{ybegin}{A numeric value. Coordinate y of the point from which to interpolate.}
   \item{xend}{A numeric value. Coordinate x of the point to which to interpolate.}
   \item{yend}{A numeric value. Coordinate y of the point to which to interpolate.}
   \item{npoints}{Number of points (including the limits).}
@@ -43,9 +43,9 @@ A data frame with the interpolated values.
   \code{\link[base]{jitter}}
 }
 \examples{
-plot(pointssegment(x=0, y=0, xend=10, yend=10))
-plot(pointssegment(x=0, y=0, xend=10, yend=10, xjitteramount=2,yjitteramount=2))
-plot(pointssegment(x=0, y=0, xend=10, yend=10, xjitteramount=2,yjitteramount=2,bezier=FALSE))
+plot(pointssegment(xbegin=0, ybegin=0, xend=10, yend=10))
+plot(pointssegment(xbegin=0, ybegin=0, xend=10, yend=10, xjitteramount=2,yjitteramount=2))
+plot(pointssegment(xbegin=0, ybegin=0, xend=10, yend=10, xjitteramount=2,yjitteramount=2,bezier=FALSE))
 }
 
 %\keyword{ manip }

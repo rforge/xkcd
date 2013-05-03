@@ -1,6 +1,6 @@
 ## Emilio Torres Manzanera
 ## University of Oviedo
-## Time-stamp: <2013-05-03 Fri 12:52 emilio on emilio-laptop2>
+## Time-stamp: <2013-05-03 Fri 21:32 emilio on emilio-laptop2>
 ## ============================================================
 
 
@@ -32,11 +32,11 @@ xkcdrect <- function(mapping, data, ...) {
   if( "yjitteramount" %in% names(argList) ) borderyjitteramount <- argList[["yjitteramount"]]
 
 
-  ## To avoid  Notes when R CMD check
-  mappu <- with(data, mappingjoin(aes(x=xmin,y=ymax, xend=xmax, yend=ymax), mapping))
-  mappr <- with(data, mappingjoin(aes(x=xmax,y=ymin, xend=xmax, yend=ymax), mapping))
-  mappl <- with(data, mappingjoin(aes(x=xmin,y=ymin, xend=xmin, yend=ymax), mapping))
-  mappb <- with(data, mappingjoin(aes(x=xmin,y=ymin, xend=xmax, yend=ymin), mapping))
+  ## To avoid  Notes when R CMD check, use a with
+  mappu <- with(data, mappingjoin(aes(xbegin=xmin,ybegin=ymax, xend=xmax, yend=ymax), mapping))
+  mappr <- with(data, mappingjoin(aes(xbegin=xmax,ybegin=ymin, xend=xmax, yend=ymax), mapping))
+  mappl <- with(data, mappingjoin(aes(xbegin=xmin,ybegin=ymin, xend=xmin, yend=ymax), mapping))
+  mappb <- with(data, mappingjoin(aes(xbegin=xmin,ybegin=ymin, xend=xmax, yend=ymin), mapping))
   
   upperline <- xkcdline(mappu,
                         data, colour=bordercolour,

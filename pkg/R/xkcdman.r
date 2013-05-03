@@ -1,6 +1,6 @@
 # Emilio Torres Manzanera
 # University of Oviedo
-# Time-stamp: <2013-05-02 Thu 23:16 emilio on emilio-laptop2>
+# Time-stamp: <2013-05-03 Fri 20:41 emilio on emilio-laptop2>
 # =====================================================================
 
 
@@ -37,12 +37,14 @@ xkcdman <- function(mapping, data, ...) {
   
   bone <- function(begin, distance, angle, ratioxy, mapping, data, ... ) {
     end <- cbind( begin[,1] + distance * cos( angle ) * ratioxy, begin[,2] + distance * sin(angle) )
-    data$x <- begin[,1]
-    data$y <- begin[,2]
+    data$xbegin <- begin[,1]
+    data$ybegin <- begin[,2]
     data$xend <- end[,1]
     data$yend <- end[,2]
     
     ttmapping <- unlist(mapping)
+    ttmapping$xbegin <- parse(text = "xbegin")[[1]]
+    ttmapping$ybegin <- parse(text = "ybegin")[[1]]
     ttmapping$xend <- parse(text = "xend")[[1]]
     ttmapping$yend <- parse(text = "yend")[[1]]
     newmapping <- structure(ttmapping, class = "uneval")

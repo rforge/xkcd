@@ -1,15 +1,13 @@
 # Emilio Torres Manzanera
 # University of Oviedo
-# Time-stamp: <2013-05-02 Thu 09:29 emilio on emilio-despacho>
+# Time-stamp: <2013-05-03 Fri 20:19 emilio on emilio-laptop2>
 # =====================================================================
 
 
-pointssegment <- function(x, y, xend, yend, npoints = 10, xjitteramount= 0, yjitteramount=0, bezier = TRUE) {
+pointssegment <- function(xbegin, ybegin, xend, yend, npoints = 10, xjitteramount= 0, yjitteramount=0, bezier = TRUE) {
   require(Hmisc) # bezier
   if(npoints < 2 )
     stop("npoints must be greater than 1")
-  xbegin <- x
-  ybegin <- y
   ## If there are no jitters, do not interpolate
   if( xjitteramount == 0 & yjitteramount == 0) npoints <- 2 
   x <- seq(xbegin,xend,length.out = npoints)

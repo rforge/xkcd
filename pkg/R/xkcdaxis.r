@@ -1,6 +1,6 @@
 ## Emilio Torres Manzanera
 ## University of Oviedo
-## Time-stamp: <2013-05-03 Fri 15:28 emilio on emilio-laptop2>
+## Time-stamp: <2013-05-03 Fri 21:24 emilio on emilio-laptop2>
 ## ============================================================
 
 ## Axis
@@ -14,18 +14,21 @@ xkcdaxis <- function(xrange, yrange) {
   ## Notes do not forbbiden the submission
   ## I will follow this suggestion:
   ## http://stackoverflow.com/questions/9439256/how-can-i-handle-r-cmd-check-no-visible-binding-for-global-variable-notes-when
-  ##mappingsegment <- aes(x=x,y=y,xend=xend,yend=yend)
-  dataaxex <- data.frame(x=xrange[1]-xjitteramount,
-                          y=yrange[1]-yjitteramount,
+  ##mappingsegment <- aes(x=x,y=y,xend=xend,yend=yend) ## Put it within a with!!!
+ 
+  dataaxex <- data.frame(xbegin=xrange[1]-xjitteramount,
+                          ybegin=yrange[1]-yjitteramount,
                           xend=xrange[2]+xjitteramount,
                           yend=yrange[1]-yjitteramount)
-  mappingsegment <- with(dataaxex, aes(x=x,y=y,xend=xend,yend=yend))
+  mappingsegment <- with(dataaxex, aes(xbegin=xbegin,ybegin=ybegin,xend=xend,yend=yend))
   axex <- xkcdline(mappingsegment, dataaxex, yjitteramount = yjitteramount, mask = FALSE )
-  dataaxey <- data.frame(x=xrange[1]-xjitteramount,
-                          y=yrange[1]-yjitteramount,
+  
+ 
+  dataaxey <- data.frame(xbegin=xrange[1]-xjitteramount,
+                          ybegin=yrange[1]-yjitteramount,
                           xend=xrange[1]-xjitteramount,
                           yend=yrange[2]+yjitteramount)
-  mappingsegment <- with(dataaxey, aes(x=x,y=y,xend=xend,yend=yend))
+  mappingsegment <- with(dataaxey, aes(xbegin=xbegin,ybegin=ybegin,xend=xend,yend=yend))
   axey <- xkcdline(mappingsegment, dataaxey, xjitteramount = xjitteramount, mask = FALSE )
   coordcarte <- coord_cartesian(xlim = xrange + 1.5*c(-xjitteramount,xjitteramount),
                                 ylim = yrange + 1.5*c(-yjitteramount,yjitteramount))

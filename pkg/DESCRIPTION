@@ -1,6 +1,6 @@
 Package: xkcd
 Type: Package
-Title: Making XKCD style graphs 
+Title: Plotting ggplot graphics in a XKCD style 
 Version: 0.0.1
 Date: 2013-04-27
 Author: Emilio Torres Manzanera

@@ -19,12 +19,12 @@ Version: \tab 0.0.1\cr
 Date: \tab 2013-04-27\cr
 License: \tab GPL3\cr
 }
-This package introduces two main functions: \command{man} and
-\command{segment}. The \command{man} function creates a xkcd man and the
-\command{segment} one plots pseudo handwritten segments. Both functions
+This package introduces three main functions: \command{xkcdman}, \command{xkcdline} and
+\command{xkcdrect}. The \command{xkcdman} function creates a XKCD man
+and the other one plot pseudo handwritten objects. These functions
 are derived from the \command{geom_path} of the package
-ggplot. Therefore, you can use all the funcionalities of the ggplot system. See
-the vignette for detailed examples.
+ggplot2. All the funcionalities of the ggplot system can be used. See
+the vignettes for detailed examples.
 }
 \author{
 Emilio Torres Manzanera
