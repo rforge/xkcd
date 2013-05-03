@@ -1,0 +1,12 @@
+Package: xkcd
+Type: Package
+Title: Making XKCD style graphs 
+Version: 0.0.1
+Date: 2013-04-27
+Author: Emilio Torres Manzanera
+Maintainer: Emilio Torres Manzanera <torres@uniovi.es>
+Description:  This package allows the representation of ggplot graphs using the XKCD style. 
+License: GPL-3
+Depends: Hmisc, ggplot2, extrafont
+Suggests: methods
+URL: http://xkcd.r-forge.r-project.org/
