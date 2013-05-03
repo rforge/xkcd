@@ -1,7 +1,7 @@
 %% -*- ispell-local-dictionary: "british" -*-
 %% Emilio Torres Manzanera
 %% University of Oviedo
-%% Time-stamp: <2013-05-03 Fri 21:43 emilio on emilio-laptop2>
+%% Time-stamp: <2013-05-03 Fri 22:13 emilio on emilio-laptop2>
 %% =====================================================================
 % \VignetteIndexEntry{Graphs in XKCD style}
 % \VignettePackage{picante}
@@ -202,7 +202,7 @@ datalines <- data.frame(xbegin=c(2008.3,2010.5),ybegin=c(63000,59600),
 
 p <- ggplot() + geom_smooth(mapping=aes(x=year, y =number), data =volunteers,method="loess")
 p + xkcdaxis(xrange,yrange) +
-  ylab("Volunteers at Spanish Caritas") +
+  ylab("Volunteers at Caritas Spain") +
   xkcdman(mapping, dataman) +
   annotate("text", x=2008.7, y = 63700, label = "We Need\nVolunteers!", family="xkcd" ) +
   annotate("text", x=2010.5, y = 60000, label = "Sure\nI can!", family="xkcd" ) +
