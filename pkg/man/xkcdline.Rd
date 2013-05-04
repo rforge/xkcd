@@ -1,10 +1,10 @@
 \name{xkcdline}
 \alias{xkcdline}
 \title{
-Draw a handwritten curve.
+Draws handwritten lines
 }
 \description{
-  This function draws a ggplot segment or circle in a handwritten style.
+  This function draws ggplot2 segments or circles in a handwritten style.
   }
   \usage{
 xkcdline(mapping, data, typexkcdline = "segment", mask = TRUE, ...) 

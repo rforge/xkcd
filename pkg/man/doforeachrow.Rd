@@ -1,7 +1,7 @@
 \name{doforeachrow}
 \alias{doforeachrow}
 \title{
-Applies a function to each row of a data frame.
+Applies a function to each row of a data frame
 }
 \description{
   This function applies a function to each row of a data frame. All

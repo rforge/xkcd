@@ -1,7 +1,7 @@
 \name{xkcdrect}
 \alias{xkcdrect}
 \title{
-Plots rectangles.
+Plots rectangles
 }
 \description{
   This function plots rectangles. 

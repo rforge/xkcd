@@ -1,7 +1,7 @@
 \name{pointssegment}
 \alias{pointssegment}
 \title{
-Interpolates between two points.
+Interpolates between two points
 }
 \description{
   This function calculates intermediate points between two points. The

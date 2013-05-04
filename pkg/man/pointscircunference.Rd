@@ -1,7 +1,7 @@
 \name{poinstcircunference}
 \alias{pointscircunference}
 \title{
-Calculates a handwritten circunference.
+Calculates a handwritten circunference
 }
 \description{
   This function estimate points to draw a handwritten circunference.

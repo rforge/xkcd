@@ -1,7 +1,7 @@
 \name{theme_xkcd}
 \alias{theme_xkcd}
 \title{
-Creates a XKCD theme.
+Creates a XKCD theme
 }
 \description{
   This function creates a XKCD theme for ggplot graphics. 
