@@ -1,6 +1,6 @@
 # Emilio Torres Manzanera
 # University of Oviedo
-# Time-stamp: <2013-05-02 Thu 15:58 emilio on emilio-despacho>
+# Time-stamp: <2013-05-06 Mon 09:16 emilio on emilio-despacho>
 # =====================================================================
 
 
@@ -33,10 +33,10 @@ fonts()
 
 
 library(ggplot2)
-p <- qplot(mpg, wt, data=mtcars) 
-
+p <- qplot(mpg, wt, data=mtcars) + theme(text = element_text(size=16, family="xkcd"))
 p
-p + theme(text = element_text(size=16, family="xkcd")) + annotate("text", x=20,y=4,label="Hello", family="xkcd")
+
++ annotate("text", x=20,y=4,label="Hello", family="xkcd")
 
 quit()
 

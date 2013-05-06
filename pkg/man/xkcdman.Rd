@@ -37,6 +37,7 @@ xkcdman(mapping, data, ...)
    \item angleofneck: angle between the begin of spine and a horizontal
    line that passes by the center of the head.
  }
+ Angles are in radians.
 
    
   Additionally, you can use the aesthetics of \code{geom_path},
@@ -53,9 +54,10 @@ xkcdman(mapping, data, ...)
 % \author{
 % Emilio Torres Manzanera
 % }
-% \note{
-%  Generic function.
-% }
+\note{
+See \code{vignette("xkcd-intro")} for a
+graphical representation of the angles used in this function.
+}
 \seealso{
   \code{\link[ggplot2]{aes}},
   \code{\link[ggplot2]{geom_path}},
