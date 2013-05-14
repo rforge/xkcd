@@ -1,7 +1,7 @@
 %% -*- ispell-local-dictionary: "british" -*-
 %% Emilio Torres Manzanera
 %% University of Oviedo
-%% Time-stamp: <2013-05-06 Mon 21:14 emilio on emilio-laptop2>
+%% Time-stamp: <2013-05-14 Tue 21:33 emilio on emilio-laptop2>
 %% =====================================================================
 % \VignetteIndexEntry{Graphs in XKCD style}
 % \VignettePackage{picante}
@@ -107,8 +107,12 @@ The package \texttt{xkcd} uses the XKCD fonts. Therefore, an easy way to check w
 <<fig=TRUE>>=
 library(extrafont)
 library(ggplot2)
-ggplot() + geom_point(aes(x=mpg, y=wt), data=mtcars) + 
+if( "xkcd" %in% fonts()) {
+p <-  ggplot() + geom_point(aes(x=mpg, y=wt), data=mtcars) + 
   theme(text = element_text(size = 16, family = "xkcd"))
+} else  {
+warning("Not xkcd fonts installed!")
+}
 @ 
 \end{center}
 
@@ -296,7 +300,9 @@ plotangle <- function(point,radius,angle,text,...) {
                     mask=FALSE,linetype=2, colour="green")
   xenda <- x + 1.05*radius * cos(angle/2)
   yenda <- x + 1.05*radius * sin(angle/2)
-  atext <- annotate("text", x = x + 1.01*radius, y=y,label=text,colour="red", family="xkcd")
+  if( "xkcd" %in% fonts()) {
+    atext <- annotate("text", x = x + 1.01*radius, y=y,label=text,colour="red", family="xkcd")
+  } else {    atext <- annotate("text", x = x + 1.01*radius, y=y,label=text,colour="red")}
   list( langle , recth , rectv, atext)
 }
 
@@ -398,7 +404,11 @@ xrange <- range(8, 24)
 yrange <- range(min(data$ymin) + 10 , max(data$ymax) + 200)
 ratioxy <- diff(xrange)/diff(yrange)
 timelabel <-  function(text,x,y) {
-  list(annotate("text", x=x, y = y + 65, label=text, size = 6,family ="xkcd"),
+  if( "xkcd" %in% fonts()) {
+    te1 <- annotate("text", x=x, y = y + 65, label=text, size = 6,family ="xkcd")
+  } else {
+    te1 <- annotate("text", x=x, y = y + 65, label=text, size = 6)}
+  list(te1,
   xkcdline(aes(xbegin=xbegin, ybegin= ybegin, xend=xend,yend=yend),
            data.frame(xbegin=x,ybegin= y + 50, xend=x,yend=y), xjitteramount = 0.5))
   }
@@ -413,6 +423,7 @@ y <- y[inside]
 nman <- length(x)
 sizer <- round(runif(nman, 1, 10),0)
 angler <- runif(nman, -10,10)
+if( "xkcd" %in% fonts()) {
 p <- ggplot() +
   geom_text(aes(x,y,label="Mummy",angle=angler,hjust=0, vjust=0),
             family="xkcd",size=sizer,alpha=0.3) +
@@ -426,6 +437,21 @@ p <- ggplot() +
   timelabel("Homework", 18, 525) +
   timelabel("Bath", 21, 110) +
   timelabel("zzz", 23.5, 60)
+} else {
+p <- ggplot() +
+  geom_text(aes(x,y,label="Mummy",angle=angler,hjust=0, vjust=0),
+            size=sizer,alpha=0.3) +
+  xkcdaxis(xrange,yrange) +
+  annotate("text", x=16, y = 650,
+           label="Happy Mother's day", size = 16) +
+  xlab("daily schedule") +
+  ylab("Number of times mothers are called on by their children") +
+  timelabel("Wake up", 9, 125) + timelabel("School", 12.5, 90) +
+  timelabel("Lunch", 15, 130) +
+  timelabel("Homework", 18, 525) +
+  timelabel("Bath", 21, 110) +
+  timelabel("zzz", 23.5, 60)}
+
 p
 
 @ 
@@ -471,12 +497,21 @@ datalines <- data.frame(xbegin=c(2008.3,2010.5),ybegin=c(63000,59600),
                         xend=c(2008.5,2010.3), yend=c(63400,59000))
 
 p <- ggplot() + geom_smooth(mapping=aes(x=year, y =number), data =volunteers,method="loess")
+if( "xkcd" %in% fonts()) {
 p + xkcdaxis(xrange,yrange) +
   ylab("Volunteers at Caritas Spain") +
   xkcdman(mapping, dataman) +
   annotate("text", x=2008.7, y = 63700, label = "We Need\nVolunteers!", family="xkcd" ) +
   annotate("text", x=2010.5, y = 60000, label = "Sure\nI can!", family="xkcd" ) +
- xkcdline(aes(xbegin=xbegin,ybegin=ybegin,xend=xend,yend=yend),datalines, xjitteramount = 0.12)
+ xkcdline(aes(xbegin=xbegin,ybegin=ybegin,xend=xend,yend=yend),datalines, xjitteramount = 0.12) 
+} else {
+p + xkcdaxis(xrange,yrange) +
+  ylab("Volunteers at Caritas Spain") +
+  xkcdman(mapping, dataman) +
+  annotate("text", x=2008.7, y = 63700, label = "We Need\nVolunteers!") +
+  annotate("text", x=2010.5, y = 60000, label = "Sure\nI can!") +
+ xkcdline(aes(xbegin=xbegin,ybegin=ybegin,xend=xend,yend=yend),datalines, xjitteramount = 0.12) 
+}
 @ 
 \end{center}
 
@@ -551,9 +586,15 @@ a <- ggplot() +
   xkcdaxis(xrange,yrange) +
   xlab("Year") + ylab("Volunteers at Caritas Spain")
 b <- a + plotmen(positionx, positiony,1000, ratioxy) 
+if( "xkcd" %in% fonts()) {
 c <- b + annotate("text", 
                   x= positionx, y= positiony, 
-                  label=volun, family="xkcd",size=3)
+                  label=volun, family="xkcd",size=3) 
+} else {
+c <- b + annotate("text", 
+                  x= positionx, y= positiony, 
+                  label=volun,size=3) 
+}
 c
 @ 
 \end{center}
