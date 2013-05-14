@@ -1,7 +1,7 @@
 %% -*- ispell-local-dictionary: "british" -*-
 %% Emilio Torres Manzanera
 %% University of Oviedo
-%% Time-stamp: <2013-05-14 Tue 21:33 emilio on emilio-laptop2>
+%% Time-stamp: <2013-05-14 Tue 21:58 emilio on emilio-laptop2>
 %% =====================================================================
 % \VignetteIndexEntry{Graphs in XKCD style}
 % \VignettePackage{picante}
@@ -112,7 +112,9 @@ p <-  ggplot() + geom_point(aes(x=mpg, y=wt), data=mtcars) +
   theme(text = element_text(size = 16, family = "xkcd"))
 } else  {
 warning("Not xkcd fonts installed!")
+p <-  ggplot() + geom_point(aes(x=mpg, y=wt), data=mtcars) 
 }
+p
 @ 
 \end{center}
 
