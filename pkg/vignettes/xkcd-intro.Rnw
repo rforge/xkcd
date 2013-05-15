@@ -1,7 +1,7 @@
 %% -*- ispell-local-dictionary: "british" -*-
 %% Emilio Torres Manzanera
 %% University of Oviedo
-%% Time-stamp: <2013-05-14 Tue 21:58 emilio on emilio-laptop2>
+%% Time-stamp: <2013-05-15 Wed 09:45 emilio on emilio-despacho>
 %% =====================================================================
 % \VignetteIndexEntry{Graphs in XKCD style}
 % \VignettePackage{picante}
@@ -367,8 +367,13 @@ p <- ggplot() + man +
         panel.margin =       unit(0, "lines"),
         plot.margin =        unit(c(0, 0, -.5, -.5), "lines"),
         complete = TRUE
-        ) +  ## theme_nothing() +
-  annotate("text", x = 1, y=-4,label="Angles",colour="red", family="xkcd",size=16)
+        ) 
+
+if("xkcd" %in% fonts()) {
+  p <-  p + annotate("text", x = 1, y=-4,label="Angles",colour="red", family="xkcd",size=16)
+  } else {
+   p <-  p + annotate("text", x = 1, y=-4,label="Angles",colour="red",size=16)
+ } 
 p
 @
 \end{center}
