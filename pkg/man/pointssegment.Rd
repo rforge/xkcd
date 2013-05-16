@@ -8,7 +8,8 @@ Interpolates between two points
   intermidate points can be jittered and smoothed with a Bezier curve.
   }
   \usage{
-pointssegment(xbegin, ybegin, xend, yend, npoints = 10, xjitteramount= 0, yjitteramount=0, bezier = TRUE)
+pointssegment(xbegin, ybegin, xend, yend,
+              npoints = 10, xjitteramount= 0, yjitteramount=0, bezier = TRUE)
 }
 
 \arguments{
@@ -44,8 +45,10 @@ A data frame with the interpolated values.
 }
 \examples{
 plot(pointssegment(xbegin=0, ybegin=0, xend=10, yend=10))
-plot(pointssegment(xbegin=0, ybegin=0, xend=10, yend=10, xjitteramount=2,yjitteramount=2))
-plot(pointssegment(xbegin=0, ybegin=0, xend=10, yend=10, xjitteramount=2,yjitteramount=2,bezier=FALSE))
+plot(pointssegment(xbegin=0, ybegin=0, xend=10, yend=10,
+                   xjitteramount=2,yjitteramount=2))
+plot(pointssegment(xbegin=0, ybegin=0, xend=10, yend=10,
+                   xjitteramount=2,yjitteramount=2,bezier=FALSE))
 }
 
 %\keyword{ manip }

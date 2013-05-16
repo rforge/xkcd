@@ -7,7 +7,8 @@ Calculates a handwritten circunference
   This function estimate points to draw a handwritten circunference.
   }
   \usage{
-pointscircunference(x =0, y=0, diameter = 1, ratioxy=1, npoints = 16, alpha=  runif(1, 0, pi/2))
+pointscircunference(x=0, y=0, diameter=1, ratioxy=1,
+                    npoints= 16, alpha= runif(1, 0, pi/2))
 }
 
 \arguments{
