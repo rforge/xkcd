@@ -2,7 +2,7 @@ Package: xkcd
 Type: Package
 Title: Plotting ggplot2 graphics in a XKCD style 
 Version: 0.0.1
-Date: 2013-04-27
+Date: 2013-05-15
 Author: Emilio Torres Manzanera
 Maintainer: Emilio Torres Manzanera <torres@uniovi.es>
 Description:  This package allows the representation of ggplot2 graphs using the XKCD style. 
