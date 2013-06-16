@@ -1,6 +1,6 @@
 ## Emilio Torres Manzanera
 ## University of Oviedo
-## Time-stamp: <2013-06-16 Sun 21:19 emilio on emilio-laptop2>
+## Time-stamp: <2013-06-16 Sun 23:09 emilio on emilio-laptop2>
 ## ============================================================
 
 ## http://cincodias.com/cincodias/2013/06/12/economia/1371050593_717680.html#?id_externo_display=03072012-cincodias-dsp-pie-001-cds
@@ -47,14 +47,45 @@ ggplot(data=basedatos, aes(x=comprador, y=precio,
     ylab('Precio')
 
 
+basedatos$xjitteramount = 5
+basedatos$yjitteramount = 10000
+
+base = basedatos
+group = "variable"
+xname = "comprador"
+yname = "precio"
+
+
+newbase <-  NULL
+for( i in levels(base[,group])) {
+##for( i in c("Malaga","Baleares")) {
+basegroup <- base[base[,group] %in% i, ]
+basepath <- basegroup[,c(xname,yname,"xjitteramount","yjitteramount")]
+names(basepath) <- c("xbegin","ybegin","xjitteramount","yjitteramount")
+basepath$xend <- c(basepath$xbegin[-1],NA)
+basepath$yend <- c(basepath$ybegin[-1],NA)
+basepath <- basepath[complete.cases(basepath),]
+npuntos <- dim(basepath)[1]
+npoints <- 1 + 10 / (dim(basepath)[1])
+basepath$npoints <- npoints
+basepath$bezier <- TRUE
+kk <- doforeachrow(data=basepath, fun="pointssegment", doitalsoforoptargs=FALSE)
+puntosjuntos <- do.call("rbind",kk)
+puntosjuntos[,group] <- i
+newbase <- rbind(newbase,puntosjuntos)
+}
+
+
 yrange <- range(basedatos$precio,na.rm=TRUE)
 yrange
 basedatos
 base1 <- basedatos[basedatos$comprador<400 & basedatos$comprador>25,]
-listaciudades <- levels(base1$variable)[table(base1$variable)==5]
-listaciudades
-base1 <- base1[base1$variable%in%listaciudades,]
+listaciudades1 <- levels(base1$variable)[table(base1$variable)==5]
+listaciudades1
+base1 <- base1[base1$variable%in%listaciudades1,]
+newbase1 <- newbase[newbase[,group]%in%listaciudades1,]
 base2 <- basedatos[basedatos$comprador>400,]
+newbase2 <- newbase[newbase[,group]%in%c("Malaga","Baleares"),]
 ejes <- function(xrange,yrange){
  if (is.null(xrange) | is.null(yrange)) 
         stop("Arguments are: xrange, yrange")
@@ -84,7 +115,7 @@ kk <- c(6,7,8,9,10,11,12)*100000
 set.seed(130616)
 dib1 <- ggplot() +
     geom_point(data=base1, aes(x=comprador, y=precio, color=variable),alpha=0.6) +
-  geom_path(data=base1, aes(x=comprador, y=precio,  color=variable),alpha=0.6) +
+  geom_path(data=newbase1, aes(x=x, y=y,  color=variable),alpha=0.6) +
   geom_text(data=base1, aes(x=comprador, y=precio, color=variable, label=año), alpha=0.6,size=3,hjust=0, vjust=0,family="xkcd") +
    geom_text(aes(x=comprador,y=precio,label=variable,color=variable),data=base1[base1$año==2012,],hjust=1, vjust=1,family="xkcd",size=6 )+
     xlab('                                      Viviendas vendidas') +
@@ -106,7 +137,7 @@ dib1 <- ggplot() +
 ##
 dib2 <-  ggplot() +
     geom_point(data=base2, aes(x=comprador, y=precio, color=variable),alpha=0.6) +
-  geom_path(data=base2, aes(x=comprador, y=precio,  color=variable),alpha=0.6) +
+  geom_path(data=newbase2, aes(x=x, y=y,  color=variable),alpha=0.6) +
   geom_text(data=base2, aes(x=comprador, y=precio, color=variable, label=año), size=3,alpha=0.6,hjust=0, vjust=0,family="xkcd") +
    geom_text(aes(x=comprador,y=precio,label=variable,color=variable),data=base2[base2$año==2012,],hjust=1, vjust=1,family="xkcd",size=6 )+
     xlab(' ') + ejes(range(base2$comprador),yrange) +
