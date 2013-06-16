@@ -1,6 +1,6 @@
 ## Emilio Torres Manzanera
 ## University of Oviedo
-## Time-stamp: <2013-06-16 Sun 20:00 emilio on emilio-laptop2>
+## Time-stamp: <2013-06-16 Sun 21:19 emilio on emilio-laptop2>
 ## ============================================================
 
 ## http://cincodias.com/cincodias/2013/06/12/economia/1371050593_717680.html#?id_externo_display=03072012-cincodias-dsp-pie-001-cds
@@ -87,7 +87,7 @@ dib1 <- ggplot() +
   geom_path(data=base1, aes(x=comprador, y=precio,  color=variable),alpha=0.6) +
   geom_text(data=base1, aes(x=comprador, y=precio, color=variable, label=año), alpha=0.6,size=3,hjust=0, vjust=0,family="xkcd") +
    geom_text(aes(x=comprador,y=precio,label=variable,color=variable),data=base1[base1$año==2012,],hjust=1, vjust=1,family="xkcd",size=6 )+
-    xlab('Viviendas vendidas') +
+    xlab('                                      Viviendas vendidas') +
     ylab('Miles de euros') +
   xkcdaxis(c(12,255),yrange) +
   theme(
@@ -124,25 +124,30 @@ dib2 <-  ggplot() +
            axis.title.y = element_blank(),
          axis.ticks.y = element_blank(), 
                            axis.text.y  = element_blank())
-grid.newpage()
-pushViewport( viewport( layout = grid.layout(1,2, widths = c(.7,.3))))
-vplayout <- function(x, y) viewport(layout.pos.row = x, layout.pos.col = y)
-print(dib1, vp = vplayout(1,1))
-print(dib2,   vp = vplayout(1,2))
+## grid.newpage()
+## pushViewport( viewport( layout = grid.layout(1,2, widths = c(.7,.3))))
+## vplayout <- function(x, y) viewport(layout.pos.row = x, layout.pos.col = y)
+## print(dib1, vp = vplayout(1,1))
+## print(dib2,   vp = vplayout(1,2))
+library(gridExtra)
+p <- arrangeGrob(dib1, dib2,widths=c(0.7,0.3),ncol=2)
+grid.draw(p) # interactive device
+
+ggsave("GrEvolucionVentaViviendas.png", p) # need to specify what to save explicitely
 
 
-png(file="GrEvolucionVentaViviendas.png")
-grid.newpage()
-pushViewport( viewport( layout = grid.layout(1,2, widths = c(.7,.3))))
-vplayout <- function(x, y) viewport(layout.pos.row = x, layout.pos.col = y)
-print(dib1, vp = vplayout(1,1))
-print(dib2,   vp = vplayout(1,2))
-dev.off()
+## pdf(file="GrEvolucionVentaViviendas.pdf")
+## grid.newpage()
+## pushViewport( viewport( layout = grid.layout(1,2, widths = c(.7,.3))))
+## vplayout <- function(x, y) viewport(layout.pos.row = x, layout.pos.col = y)
+## print(dib1, vp = vplayout(1,1))
+## print(dib2,   vp = vplayout(1,2))
+## dev.off()
 
-pdf(file="GrEvolucionVentaViviendas.pdf")
-grid.newpage()
-pushViewport( viewport( layout = grid.layout(1,2, widths = c(.7,.3))))
-vplayout <- function(x, y) viewport(layout.pos.row = x, layout.pos.col = y)
-print(dib1, vp = vplayout(1,1))
-print(dib2,   vp = vplayout(1,2))
-dev.off()
+## library(grDevices)
+## dir()
+## embedFonts("GrEvolucionVentaViviendas.pdf")
+
+
+
+?arrangeGrob
