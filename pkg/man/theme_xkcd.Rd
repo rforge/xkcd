@@ -51,8 +51,10 @@ A theme with white background and fonts of the XKCD family.
 %   \code{\link[gpplot2]{aes_string}}
 % }
 \examples{
+\dontrun{ 
 p <- ggplot() + geom_point(aes(mpg, wt), data=mtcars) + theme_xkcd()
 p
+}
 }
 
 \keyword{ manip }

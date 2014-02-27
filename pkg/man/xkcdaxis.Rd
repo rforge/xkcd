@@ -24,11 +24,13 @@ xkcdaxis(xrange, yrange, ...)
 A layer with the axis.
 }
 \examples{
+\dontrun{
 xrange <- range(mtcars$mpg)
 yrange <- range(mtcars$wt)
 p <- ggplot() + geom_point(aes(mpg, wt), data=mtcars) +
      xkcdaxis(xrange,yrange)
 p
+}
 }
 
 \keyword{ manip }

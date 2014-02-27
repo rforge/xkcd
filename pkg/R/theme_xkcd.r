@@ -1,13 +1,15 @@
 # Emilio Torres Manzanera
 # University of Oviedo
-# Time-stamp: <2014-02-27 jue 16:10 emilio on emilio-Satellite-P100>
+# Time-stamp: <2014-02-27 jue 19:42 emilio on emilio-Satellite-P100>
 # =====================================================================
 
 ## fibosworld 2013. Change fonts in ggplot2, and create xkcd style graphs \url{http://fibosworld.wordpress.com/2013/02/17/change-fonts-in-ggplot2-and-create-xkcd-style-graphs/}
 
 theme_xkcd <- function(){
   ##require(sysfonts)
-  if( "xkcd" %in% font.families() ) {
+  if( "xkcd.ttf" %in% sysfonts::font.files())
+    sysfonts::font.add("xkcd", regular = "xkcd.ttf")
+  if( "xkcd" %in% sysfonts::font.families() ) {
   theme(panel.grid.major = element_blank(),
         ##axis.ticks = element_blank(),
         axis.ticks = element_line(colour = "black"),
