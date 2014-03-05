@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.2.5)  27 FEB 2014 19:20
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.2.5)  5 MAR 2014 06:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -747,7 +747,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 47.
 
-<xkcd-intro-twoman.png, id=52, 433.62pt x 433.62pt>
+<xkcd-intro-twoman.png, id=76, 433.62pt x 433.62pt>
 File: xkcd-intro-twoman.png Graphic file (type png)
 
 <use xkcd-intro-twoman.png>
@@ -755,9 +755,9 @@ Package pdftex.def Info: xkcd-intro-twoman.png used on input line 53.
 (pdftex.def)             Requested size: 234.8775pt x 234.87912pt.
  (./xkcd-intro.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 5.
+(Font)              <7> on input line 3.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 5.
+(Font)              <5> on input line 3.
  [1
 
 {/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./xkcd-
@@ -765,129 +765,122 @@ intro-twoman.png>])
 \tf@toc=\write6
 \openout6 = `xkcd-intro.toc'.
 
-LaTeX Font Info:    Try loading font information for T1+aett on input line 60.
+LaTeX Font Info:    Try loading font information for T1+aett on input line 61.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/ae/t1aett.fd
 File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
 )
-<xkcd-intro-003.png, id=79, 433.62pt x 433.62pt>
+<xkcd-intro-003.png, id=109, 433.62pt x 433.62pt>
 File: xkcd-intro-003.png Graphic file (type png)
  <use xkcd-intro-003.png>
-Package pdftex.def Info: xkcd-intro-003.png used on input line 83.
+Package pdftex.def Info: xkcd-intro-003.png used on input line 84.
 (pdftex.def)             Requested size: 234.8775pt x 234.87912pt.
 
 [2] [3 <./xkcd-intro-003.png>]
-<convincing.png, id=96, 742.775pt x 239.89626pt>
+<convincing.png, id=125, 742.775pt x 239.89626pt>
 File: convincing.png Graphic file (type png)
  <use convincing.png>
-Package pdftex.def Info: convincing.png used on input line 145.
+Package pdftex.def Info: convincing.png used on input line 177.
 (pdftex.def)             Requested size: 328.82707pt x 106.20258pt.
 
-<xkcd-intro-008.png, id=97, 433.62pt x 433.62pt>
-File: xkcd-intro-008.png Graphic file (type png)
- <use xkcd-intro-008.png>
-Package pdftex.def Info: xkcd-intro-008.png used on input line 166.
+<xkcd-intro-010.png, id=126, 433.62pt x 433.62pt>
+File: xkcd-intro-010.png Graphic file (type png)
+ <use xkcd-intro-010.png>
+Package pdftex.def Info: xkcd-intro-010.png used on input line 198.
 (pdftex.def)             Requested size: 234.8775pt x 234.87912pt.
 
-[4 <./convincing.png> <./xkcd-intro-008.png>]
-<xkcd-intro-009.png, id=104, 433.62pt x 433.62pt>
-File: xkcd-intro-009.png Graphic file (type png)
- <use xkcd-intro-009.png>
-Package pdftex.def Info: xkcd-intro-009.png used on input line 208.
+[4 <./convincing.png>] [5 <./xkcd-intro-010.png>]
+<xkcd-intro-011.png, id=137, 433.62pt x 433.62pt>
+File: xkcd-intro-011.png Graphic file (type png)
+ <use xkcd-intro-011.png>
+Package pdftex.def Info: xkcd-intro-011.png used on input line 240.
 (pdftex.def)             Requested size: 234.8775pt x 234.87912pt.
 
-[5] <xkcd-intro-facetvs.png, id=109, 433.62pt x 433.62pt>
+<xkcd-intro-facetvs.png, id=138, 433.62pt x 433.62pt>
 File: xkcd-intro-facetvs.png Graphic file (type png)
 
 <use xkcd-intro-facetvs.png>
-Package pdftex.def Info: xkcd-intro-facetvs.png used on input line 221.
+Package pdftex.def Info: xkcd-intro-facetvs.png used on input line 253.
 (pdftex.def)             Requested size: 234.8775pt x 234.87912pt.
- [6 <./xkcd-intro-009.png (PNG copy)>]
-<xkcd-intro-facetcity.png, id=114, 433.62pt x 433.62pt>
+ [6 <./xkcd-intro-011.png (PNG copy)>]
+<xkcd-intro-facetcity.png, id=143, 433.62pt x 433.62pt>
 File: xkcd-intro-facetcity.png Graphic file (type png)
 
 <use xkcd-intro-facetcity.png>
-Package pdftex.def Info: xkcd-intro-facetcity.png used on input line 233.
+Package pdftex.def Info: xkcd-intro-facetcity.png used on input line 265.
 (pdftex.def)             Requested size: 234.8775pt x 234.87912pt.
 
-<xkcd-intro-angles.png, id=115, 433.62pt x 433.62pt>
+<xkcd-intro-angles.png, id=144, 433.62pt x 433.62pt>
 File: xkcd-intro-angles.png Graphic file (type png)
 
 <use xkcd-intro-angles.png>
-Package pdftex.def Info: xkcd-intro-angles.png used on input line 240.
+Package pdftex.def Info: xkcd-intro-angles.png used on input line 272.
 (pdftex.def)             Requested size: 234.8775pt x 234.87912pt.
  [7 <./xkcd-intro-facetvs.png> <./xkcd-intro-facetcity.png>] [8 <./xkcd-intro-a
 ngles.png (PNG copy)>]
-LaTeX Font Info:    Try loading font information for TS1+aett on input line 302
+LaTeX Font Info:    Try loading font information for TS1+aett on input line 334
 .
 
 (/usr/local/texlive/2013/../texmf-local/tex/UbuntuTexDir/latex/R/tex/latex/ts1a
 ett.fd
 File: ts1aett.fd 
 )
-LaTeX Font Info:    Try loading font information for TS1+cmtt on input line 302
+LaTeX Font Info:    Try loading font information for TS1+cmtt on input line 334
 .
  (/usr/local/texlive/2013/texmf-dist/tex/latex/base/ts1cmtt.fd
 File: ts1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `TS1/aett/m/sl' in size <9> not available
-(Font)              Font shape `TS1/cmtt/m/sl' tried instead on input line 302.
+(Font)              Font shape `TS1/cmtt/m/sl' tried instead on input line 334.
 
  [9]
-<xkcd-intro-motherday.png, id=132, 433.62pt x 433.62pt>
+<xkcd-intro-motherday.png, id=162, 433.62pt x 433.62pt>
 File: xkcd-intro-motherday.png Graphic file (type png)
 
 <use xkcd-intro-motherday.png>
-Package pdftex.def Info: xkcd-intro-motherday.png used on input line 327.
+Package pdftex.def Info: xkcd-intro-motherday.png used on input line 359.
 (pdftex.def)             Requested size: 234.8775pt x 234.87912pt.
  [10 <./xkcd-intro-motherday.png>]
-<xkcd-intro-014.png, id=138, 433.62pt x 433.62pt>
-File: xkcd-intro-014.png Graphic file (type png)
- <use xkcd-intro-014.png>
-Package pdftex.def Info: xkcd-intro-014.png used on input line 383.
+<xkcd-intro-016.png, id=168, 433.62pt x 433.62pt>
+File: xkcd-intro-016.png Graphic file (type png)
+ <use xkcd-intro-016.png>
+Package pdftex.def Info: xkcd-intro-016.png used on input line 415.
 (pdftex.def)             Requested size: 234.8775pt x 234.87912pt.
 
-[11] <xkcd-intro-015.png, id=143, 433.62pt x 433.62pt>
-File: xkcd-intro-015.png Graphic file (type png)
+[11] <xkcd-intro-017.png, id=173, 433.62pt x 433.62pt>
+File: xkcd-intro-017.png Graphic file (type png)
 
-<use xkcd-intro-015.png>
-Package pdftex.def Info: xkcd-intro-015.png used on input line 406.
+<use xkcd-intro-017.png>
+Package pdftex.def Info: xkcd-intro-017.png used on input line 438.
 (pdftex.def)             Requested size: 234.8775pt x 234.87912pt.
- [12 <./xkcd-intro-014.png (PNG copy)>] [13 <./xkcd-intro-015.png>] <xkcd-intro
--CaritasSpain.png, id=154, 433.62pt x 433.62pt>
+ [12 <./xkcd-intro-016.png (PNG copy)>] [13 <./xkcd-intro-017.png>] <xkcd-intro
+-CaritasSpain.png, id=184, 433.62pt x 433.62pt>
 File: xkcd-intro-CaritasSpain.png Graphic file (type png)
 
 <use xkcd-intro-CaritasSpain.png>
-Package pdftex.def Info: xkcd-intro-CaritasSpain.png used on input line 470.
+Package pdftex.def Info: xkcd-intro-CaritasSpain.png used on input line 502.
 (pdftex.def)             Requested size: 234.8775pt x 234.87912pt.
  [14]
-Overfull \hbox (6.31212pt too wide) in paragraph at lines 503--504
+Overfull \hbox (6.31212pt too wide) in paragraph at lines 515--516
 []\T1/aer/m/n/10 Various Au-thors 2012. How can we make xkcd style graphs in R?
  []$\T1/aett/m/n/10 http : / / stackoverflow . com / questions /
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 508.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 523.
 [15 <./xkcd-intro-CaritasSpain.png (PNG copy)>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 508.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 523.
  (./xkcd-intro.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 508.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 508.
-
-
-Package rerunfilecheck Warning: File `xkcd-intro.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `xkcd-intro.out':
-(rerunfilecheck)             Before: 1DED2463B2AD478EE14A33A97105141E;665
-(rerunfilecheck)             After:  C4644B981EA99CED9EBA41E1D14C2547;870.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 508.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 523.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 523.
+Package rerunfilecheck Info: File `xkcd-intro.out' has not changed.
+(rerunfilecheck)             Checksum: B127576264EBF6EBBA97F703172B3653;1024.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 523.
  ) 
 Here is how much of TeX's memory you used:
- 7320 strings out of 493315
- 107451 string characters out of 6137911
- 191750 words of memory out of 5000000
- 10573 multiletter control sequences out of 15000+600000
+ 7327 strings out of 493315
+ 107575 string characters out of 6137911
+ 191747 words of memory out of 5000000
+ 10579 multiletter control sequences out of 15000+600000
  39421 words of font info for 81 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  35i,6n,28p,298b,619s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -903,10 +896,10 @@ al/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl8.pfb></usr/local
 l/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local
 /texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/t
 exlive/2013/texmf-dist/fonts/type1/public/cm-super/sfst0900.pfb>
-Output written on xkcd-intro.pdf (15 pages, 1424372 bytes).
+Output written on xkcd-intro.pdf (15 pages, 1425882 bytes).
 PDF statistics:
- 221 PDF objects out of 1000 (max. 8388607)
- 172 compressed objects within 2 object streams
- 34 named destinations out of 1000 (max. 500000)
- 157 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 245 PDF objects out of 1000 (max. 8388607)
+ 196 compressed objects within 2 object streams
+ 35 named destinations out of 1000 (max. 500000)
+ 205 words of extra memory for PDF output out of 10000 (max. 10000000)
 

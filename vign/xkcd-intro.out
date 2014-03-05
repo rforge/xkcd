@@ -1,16 +1,18 @@
-\BOOKMARK [1][-]{section.1}{The XKCD fonts}{}% 1
-\BOOKMARK [1][-]{section.2}{Installing xkcd}{}% 2
-\BOOKMARK [1][-]{section.3}{Axis}{}% 3
-\BOOKMARK [1][-]{section.4}{Cartoon characters}{}% 4
-\BOOKMARK [2][-]{subsection.4.1}{Facets}{section.4}% 5
-\BOOKMARK [2][-]{subsection.4.2}{Angles of the xkcdman}{section.4}% 6
-\BOOKMARK [1][-]{section.5}{Mother's day}{}% 7
-\BOOKMARK [2][-]{subsection.5.1}{Bar chart}{section.5}% 8
-\BOOKMARK [1][-]{section.6}{Volunteers at C\341ritas Spain}{}% 9
-\BOOKMARK [2][-]{subsection.6.1}{Scatterplot}{section.6}% 10
-\BOOKMARK [2][-]{subsection.6.2}{Bar chart}{section.6}% 11
-\BOOKMARK [2][-]{subsection.6.3}{Bar chart}{section.6}% 12
-\BOOKMARK [1][-]{section.7}{Saving the graphs}{}% 13
-\BOOKMARK [2][-]{subsection.7.1}{png}{section.7}% 14
-\BOOKMARK [2][-]{subsection.7.2}{pdf}{section.7}% 15
-\BOOKMARK [1][-]{section.8}{References}{}% 16
+\BOOKMARK [1][-]{section.1}{Graph Gallery}{}% 1
+\BOOKMARK [1][-]{section.2}{The XKCD fonts}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{Installing fonts in R}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{Saving the graphs}{section.2}% 4
+\BOOKMARK [3][-]{subsubsection.2.2.1}{png}{subsection.2.2}% 5
+\BOOKMARK [3][-]{subsubsection.2.2.2}{pdf}{subsection.2.2}% 6
+\BOOKMARK [1][-]{section.3}{Installing xkcd}{}% 7
+\BOOKMARK [1][-]{section.4}{Axis}{}% 8
+\BOOKMARK [1][-]{section.5}{Cartoon characters}{}% 9
+\BOOKMARK [2][-]{subsection.5.1}{Facets}{section.5}% 10
+\BOOKMARK [2][-]{subsection.5.2}{Angles of the xkcdman}{section.5}% 11
+\BOOKMARK [1][-]{section.6}{Mother's day}{}% 12
+\BOOKMARK [2][-]{subsection.6.1}{Bar chart}{section.6}% 13
+\BOOKMARK [1][-]{section.7}{Volunteers at C\341ritas Spain}{}% 14
+\BOOKMARK [2][-]{subsection.7.1}{Scatterplot}{section.7}% 15
+\BOOKMARK [2][-]{subsection.7.2}{Bar chart}{section.7}% 16
+\BOOKMARK [2][-]{subsection.7.3}{Bar chart}{section.7}% 17
+\BOOKMARK [1][-]{section.8}{References}{}% 18
